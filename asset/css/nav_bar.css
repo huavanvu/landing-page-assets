@@ -39,7 +39,7 @@ section.asset-section .asset-section__header .asset-section__header-logo img {
 }
 
 section.asset-section .asset-section__header {
-  margin-bottom: 90px;
+  margin: 90px 0px;
 }
 
 section.asset-section .asset-section__container .image-ads img {
@@ -83,8 +83,13 @@ section.join-with-asset-team {
 section.join-with-asset-team button.join-now {
   border-radius: 35px;
   background-color: #1C6BAE;
-  color: #ffffff;
+ 
   font-weight: normal;
+  
+}
+section.join-with-asset-team button.join-now a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 section .asset-about-have__title h2 {
@@ -122,19 +127,16 @@ section .asset-about-have__title-description {
   padding: 0.5rem;
 }
 
-.asset-section__header-title__recruitment-after::after {
-  position: absolute;
-  content: '';
+.asset-section__header__recruitment-underline {
   width: 60%;
   height: 13px;
   border-radius: 25px;
   left: 50%;
   top: 140%;
-  transform: translateX(-50%);
   background-color: #2269AB;
+  margin: 0 auto;
 }
-.asset-section__header-title__recruitment-after {
-  position: relative;
+.asset-section__header-title {
   font-weight: 700;
 }
 
@@ -177,15 +179,34 @@ section .asset-about-have__title-description {
 
 .recruitment-staff-item .card-footer img.icon {
   width: 32px;
+  margin-left: 10px;
 }
 
-#recruitment-detail .recruitment-detail__job-name{
-  /* font */
+#recruitment-detail .recruitment-detail__header-job-name{
+  font-size: 64px;
 }
 #recruitment-detail .container {
   border: 2px solid #707070;
+  padding: 40px;
 }
 
+#recruitment-detail .recruitment-detail__header-underline {
+  width: 75%;
+  height: 11px;
+  background-color: #2168AA;
+}
+#recruitment-detail .recruitment-detail-content .recruitment-detail-content__title-section {
+  color: black;
+  font-size: 32px;
+  font-weight: 500;
+}
+#recruitment-detail .recruitment-detail-content img.working-daily {
+  float: left;
+}
+
+#recruitment-detail .recruitment-detail-content__description {
+  font-size: 24px;
+}
 /* footer-nha */
 footer .partner {
   font-weight: 500;
@@ -222,6 +243,10 @@ body, html {
 
 .f-size-13 {
   font-size: 13px;
+}
+
+.p-section-top {
+  padding: 120px;
 }
 
 
@@ -262,7 +287,7 @@ body, html {
     margin-bottom: 0px;
   }
   section.asset-section .asset-section__header {
-    margin-bottom: 0px;
+    margin:45px 0px;
   }
   section .asset-about-have__title-description {
     display: -webkit-box;
@@ -272,6 +297,16 @@ body, html {
   }
   section .asset-about-have__title h2 {
     font-size: 18px;
+  }
+  .recruitment-staff-item .name-department {
+    font-size: 18px;
+  }
+  section.asset-section .asset-section__header-title h2 {
+    font-size: 18px;
+  }
+  .asset-section__header__recruitment-underline {
+    width: 50%;
+    height: 8px;
   }
 }
 
