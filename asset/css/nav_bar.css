@@ -7,6 +7,13 @@
   transition: 0.6s ease-out;
 }
 
+#asset-nav ul.navbar-nav li.nav-item.active::after {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #2269AB;
+  content: '';
+}
 #asset-nav.active-scroll {
   position: fixed;
   transition: 0.6s ease-out;
@@ -57,7 +64,6 @@ section .asset-about-have__title-description {
 }
 
 section.asset-section {
-  margin-bottom: 120px;
   overflow: hidden;
 }
 
@@ -181,6 +187,11 @@ section .asset-about-have__title-description {
   width: 32px;
   margin-left: 10px;
 }
+#recruitment-detail {
+  background-image: url('./../../resources/chitiettuyendung/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 #recruitment-detail .recruitment-detail__header-job-name{
   font-size: 64px;
@@ -188,6 +199,7 @@ section .asset-about-have__title-description {
 #recruitment-detail .container {
   border: 2px solid #707070;
   padding: 40px;
+  background-color: #F7F7F7;
 }
 
 #recruitment-detail .recruitment-detail__header-underline {
@@ -246,7 +258,7 @@ body, html {
 }
 
 .p-section-top {
-  padding: 120px;
+  padding-top: 120px;
 }
 
 
@@ -263,6 +275,15 @@ body, html {
 @media (max-width: 1024px) {
   #asset-banner .asset-banner__bg img {
     width: 75%;
+  }
+  #recruitment-detail .recruitment-detail__header-job-name {
+    font-size: 32px;
+  }
+  #recruitment-detail .recruitment-detail-content__description {
+    font-size: 20px;
+  }
+  .p-section-top {
+    padding-top: 90px;
   }
 }
 
@@ -308,6 +329,9 @@ body, html {
     width: 50%;
     height: 8px;
   }
+  .p-section-top {
+    padding-top: 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -336,7 +360,21 @@ body, html {
   section .asset-about-have__title h2 {
     font-size: 16px;
   }
-
+  #recruitment-detail .recruitment-detail-content__description {
+    font-size: 16px;
+  }
+  #recruitment-detail .recruitment-detail__header-underline {
+    height: 8px;
+  }
+  #recruitment-detail .recruitment-detail-content .recruitment-detail-content__title-section {
+    font-size: 24px;
+  }
+  #recruitment-detail .recruitment-detail-content img.working-daily {
+    width: 100% !important;
+  }
+  .p-section-top {
+    padding-top: 45px;
+  }
 }
 
 @media (min-width: 568px) {
@@ -364,7 +402,19 @@ body, html {
   section.join-with-asset-team button.join-now {
     font-size: 14px;
   }
+  #recruitment-detail .recruitment-detail-content__description {
+    font-size: 14px;
+  }
+  #recruitment-detail .recruitment-detail__header-underline {
+    height: 6px;
+  }
+  #recruitment-detail .recruitment-detail-content .recruitment-detail-content__title-section {
+    font-size: 20px;
+  }
 
+  .p-section-top {
+    padding-top: 30px;
+  }
   footer .partner {
     font-weight: 400;
     font-size: 16px;
