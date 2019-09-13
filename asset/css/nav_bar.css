@@ -61,6 +61,7 @@ section .asset-about-have__title-description {
   color: #1C6BAE;
   text-align: justify;
   margin-top: 13px;
+  padding: 0px 60px;
 }
 
 section.asset-section {
@@ -227,6 +228,10 @@ footer .partner {
 footer {
   border-top: 1px solid black;
 }
+
+#social-fixed .social-fixed__container {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
 /* default-nha */
 body, html {
   width: 100%;
@@ -315,6 +320,7 @@ body, html {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+    padding: 0px !important;
   }
   section .asset-about-have__title h2 {
     font-size: 18px;

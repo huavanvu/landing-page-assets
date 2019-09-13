@@ -223,7 +223,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8 offset-0 offset-lg-2">
-            <img class="w-100 wow fadeIn" data-wow-duration="6300ms" src="./resources/hoan toan mien phi.png" alt="">
+            <img class="w-100 wow fadeIn" data-wow-duration="800ms" src="./resources/hoan toan mien phi.png" alt="">
           </div>
         </div>
       </div>
@@ -237,24 +237,24 @@
               <div class="row">
                   <div class="col-12"><h2 class="text-center pb-3">Gia nhập <span class="color-1C6BAE">ngôi nhà chung Asset</span></h2></div>
                   <div class="col-3 text-center">
-                    <div class="quanlity color-1C6BAE">
-                      8
+                    <div class="quanlity color-1C6BAE" data-count="8">
+                      0
                     </div>
                     <div class="name-department">
                       Makerting
                     </div>
                   </div>
                   <div class="col-3 text-center">
-                      <div class="quanlity color-1C6BAE">
-                        100
+                      <div class="quanlity color-1C6BAE" data-count="100">
+                        0
                       </div>
                       <div class="name-department">
                         Web Developer
                       </div>
                   </div>
                   <div class="col-3 text-center">
-                      <div class="quanlity color-1C6BAE">
-                          10
+                      <div class="quanlity color-1C6BAE" data-count="10">
+                          0
                       </div>
                       <div class="name-department">
                         Call Center
@@ -307,8 +307,8 @@
         </div>
       </div>
     </footer>
-    <div id="social-fixed" class="fixed-top d-none d-xl-block" style="top: 25%; left: 2%; width: 50px;">
-      <div class="flex-column d-inline-flex">
+    <div id="social-fixed" class="fixed-top d-none d-xl-block" style="top: 25%; width: 50px;">
+      <div class="flex-column d-inline-flex p-3 social-fixed__container">
           <span><a class="d-inline-block mb-4" href="https://www.facebook.com/assetvn/" target="_blank"><img style="width: 48px;" src="./resources/facebook icon.png" alt=""></a></span>
           <span><a class="d-inline-block mb-4" href="https://zalo.me/2524048617738660004" target="_blank"><img style="width: 48px;" src="./resources/zalo icon.png" alt=""></a></span>
           <span><a class="d-inline-block mb-4" href="https://www.linkedin.com/company/assetvn/" target="_blank"><img style="width: 48px;" src="./resources/linkedin icon.png" alt=""></a></span>
@@ -320,8 +320,8 @@
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script src="./bower_components/wow/dist/wow.min.js"></script>
-    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <script>
+      $(document).ready(function() { $('body').bootstrapMaterialDesign(); });
       window.addEventListener('DOMContentLoaded', () => {
         new WOW().init();
         $('body').scrollspy({target: ".navbar", offset: 30});   
@@ -347,6 +347,35 @@
         }
     });
     }); 
+    </script>
+    <script>
+      let start = 0
+        $(window).scroll(function() {
+        let oTop = $('#advantage').offset().top - window.innerHeight;
+        if (start == 0 && $(window).scrollTop() > oTop) {
+          $('#advantage .quanlity').each(function() {
+            let $this = $(this),
+              countTo = $this.attr('data-count');
+            $({
+              countNum: $this.text()
+            }).animate({
+                countNum: countTo
+              },
+              {
+                duration: 5000,
+                easing: 'swing',
+                step: function() {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                  $this.text(this.countNum);
+                }
+              });
+          });
+          start = 1;
+        }
+
+        });
     </script>
   </body>
 </html>
